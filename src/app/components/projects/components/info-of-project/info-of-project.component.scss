@@ -1,9 +1,5 @@
 .info-projects {
 
-  &__display_none {
-    display: none;
-  }
-
   &__title {
     text-align: center;
     font-size: 22px;
@@ -11,13 +7,11 @@
 
   &__row {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    &__date-button {
-      color: black;
-      font-size: inherit;
-    }
+    justify-content: space-between;
+    
+    &__author {
+      flex-basis: 40%;
+     }
   }
 
   &__flex-center {

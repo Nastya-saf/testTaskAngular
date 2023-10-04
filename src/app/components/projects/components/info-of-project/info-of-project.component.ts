@@ -32,15 +32,6 @@ public model=false;
       console.log('InfoOfProject listProject: ',this.project);
       this.setFormValue();
     });
-
-  }
-
-  public showCalendar=false;
-  openCalendar() {
-    this.showCalendar = true;
-  }
-  cancelCalendar() {
-    this.showCalendar = false;
   }
 
   private setFormValue():void{

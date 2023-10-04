@@ -13,6 +13,7 @@ import { InfoOfProjectComponent } from './components/info-of-project/info-of-pro
 import { ListProjectComponent } from './components/list-project/list-project.component';
 import { RouteReuseStrategy } from '@angular/router';
 import '@angular/common/locales/global/ru';
+import { DateComponent } from './components/date-control/date-control.component';
 registerLocaleData(localeRu);
 
 @NgModule({
@@ -26,7 +27,8 @@ registerLocaleData(localeRu);
   declarations: [
     ProjectsComponent,
     InfoOfProjectComponent,
-    ListProjectComponent
+    ListProjectComponent,
+    DateComponent
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: LOCALE_ID, useValue: 'ru' },

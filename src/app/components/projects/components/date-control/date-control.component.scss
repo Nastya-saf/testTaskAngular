@@ -1,0 +1,18 @@
+.date-control {
+
+  &__display_none {
+    display: none;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__date-button {
+      color: black;
+      font-size: inherit;
+    }
+  }
+
+}

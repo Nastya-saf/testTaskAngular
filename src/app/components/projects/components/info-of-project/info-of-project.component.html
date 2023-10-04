@@ -4,15 +4,13 @@
     
     <div>
       <ion-label position="stacked" class="info-projects__lable">Дата начала</ion-label>
-      <ion-button fill="clear" (click)="openCalendar()" class="info-projects__row__date-button">
-        {{form.controls['startDate'].value | date:'d.M.y'}}
-      </ion-button> 
+      <app-date-control formControlName="startDate"></app-date-control>
     </div>
     <div>
         <ion-label position="stacked" class="info-projects__lable">Дата окончания</ion-label>
-        {{form.controls['endDate'].value | date:'d.M.y'}}
+        <app-date-control formControlName="endDate"></app-date-control>
     </div>
-    <div>
+    <div class="info-projects__row__author">
       <ion-label position="stacked" class="info-projects__lable">Автор</ion-label>
       <ion-input formControlName="createdBy"></ion-input>
     </div>
@@ -25,7 +23,7 @@
     <ion-button type="submit" color="medium" expand="full" [disabled]="form.pristine" class="info-projects__button-submit">Изменить</ion-button>
   </div>
     
-      <ion-datetime-button datetime="datetime" class="info-projects__display_none"></ion-datetime-button>
+      <!-- <ion-datetime-button datetime="datetime" class="info-projects__display_none"></ion-datetime-button>
       <ion-modal [keepContentsMounted]="true" [isOpen]="showCalendar" (didDismiss)="cancelCalendar()">
         <ng-template>
           <ion-datetime
@@ -36,5 +34,5 @@
         </ion-datetime> 
           
         </ng-template>
-      </ion-modal>
+      </ion-modal> -->
   </form>
