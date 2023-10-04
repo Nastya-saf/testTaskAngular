@@ -17,19 +17,18 @@ export class InfoOfProjectComponent implements OnInit {
   public project: Project | undefined = undefined;
 public model=false;
   constructor(private _formBuilder: FormBuilder,private _testTaskService:TestTaskService,
-    private _activatedRoute: ActivatedRoute, public navParams: NavParams) {
+     public navParams: NavParams) {
     this.form = _formBuilder.group({
-      "createdBy": ['', [Validators.required]],
-      "description": ['', [Validators.required]],      
-      "startDate": ['', [Validators.required]],
-      "endDate": ['', [Validators.required]],
+      createdBy: ['', [Validators.required]],
+      description: ['', [Validators.required]],      
+      startDate: ['', [Validators.required]],
+      endDate: ['', [Validators.required]],
     });
    }
 
   ngOnInit() {
     this._testTaskService.getProjectById(this.id).subscribe((value: Project | undefined)=>{
       this.project=value;
-      console.log('InfoOfProject listProject: ',this.project);
       this.setFormValue();
     });
   }
@@ -38,25 +37,19 @@ public model=false;
     if(!this.project){
       return;
     }
-    console.log('setFormValue');
-    console.log('!!! FORM: ',this.form);
     
     this.form.setValue({
-      "createdBy": this.project.createdBy,      
-      "description": this.project.description,
-      "startDate": this.project.startDate,
-      "endDate": this.project.endDate,
+      createdBy: this.project.createdBy,      
+      description: this.project.description,
+      startDate: this.project.startDate,
+      endDate: this.project.endDate,
     });
-    console.log('setFormValue: this.form: ',this.form.value);
-    
   }
 
   public submitForm():void{
-    console.log('InfoOfProject submitForm this.form.controls: ',this.form.controls);
     if(this.project){
       
     this.project=Object.assign(this.project,this.form.value);
-    console.log('InfoOfProject submitForm Object.assign: ',this.project);
     this._testTaskService.setProject(this.project);
     }
     

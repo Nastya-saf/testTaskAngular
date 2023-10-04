@@ -12,11 +12,10 @@ export class ListProjectComponent implements OnInit{
   public listProject:Project[] | null=null;
 
   constructor(private _testTaskService:TestTaskService) { }
+  
   ngOnInit(){
-    console.log('ListProjectComponent ngOnInit');
     this._testTaskService.getListProject().subscribe((value: Project[] | null)=>{
       this.listProject=value;
-      console.log('ListProjectComponent listProject: ',this.listProject);
     });
   }
 }

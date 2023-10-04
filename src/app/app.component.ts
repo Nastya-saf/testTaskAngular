@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  public appPages = [
+  public listPages = [
     { title: 'Данные', url: 'data', icon: 'document' },
     { title: 'Проекты', url: 'projects', icon: 'folder-open' },
   ];

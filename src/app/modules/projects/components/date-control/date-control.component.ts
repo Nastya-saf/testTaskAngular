@@ -12,9 +12,10 @@ import {  NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
   }]
 })
 export class DateComponent implements ControlValueAccessor {
-  value = 0;
-  disabled = false;
-  private onChange = (value: any) => {};
+  public value ='';
+  public disabled = false;
+  public showCalendar=false;
+  private onChange = (value: string) => {};
   private onTouched = () => {};
 
   registerOnChange(fn: any) {
@@ -25,7 +26,7 @@ export class DateComponent implements ControlValueAccessor {
     this.onTouched = fn;
   }
 
-  writeValue(outsideValue: number) {
+  writeValue(outsideValue: string) {
     this.value = outsideValue;
   }
 
@@ -33,16 +34,16 @@ export class DateComponent implements ControlValueAccessor {
     this.disabled = isDisabled;
   }
 
-  updateValue(insideValue: number) {
+  updateValue(insideValue: string) {
     this.value = insideValue;
     this.onChange(insideValue);
     this.onTouched();
   }
   
-  public showCalendar=false;
   openCalendar() {
     this.showCalendar = true;
   }
+
   cancelCalendar() {
     this.showCalendar = false;
   }

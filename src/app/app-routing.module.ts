@@ -10,11 +10,11 @@ const routes: Routes = [
   },
   {
     path: 'data',
-    loadChildren: () => import('./components/data/data.module').then(m => m.DataModule)
+    loadChildren: () => import('./modules/data/data.module').then(m => m.DataModule)
   },
   {
     path: 'projects',
-    loadChildren: () => import('./components/projects/projects.module').then(m => m.ProjectsModule)
+    loadChildren: () => import('./modules/projects/projects.module').then(m => m.ProjectsModule)
   },
 ];
 

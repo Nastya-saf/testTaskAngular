@@ -1,6 +1,6 @@
 import { Project } from '../interface/project.interface';
 
-export class LocalStorage {
+export class LocalStorageService {
   private storage: { [key: string]: any };
   private readonly prefix = 'textTask_storage';
   constructor() {
