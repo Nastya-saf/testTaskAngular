@@ -3,14 +3,13 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  height: 100%;
   
   &__list {
-    border: 1px solid rgba(0, 0, 0, 0.13);
     flex-basis: 37%;
   }
 
   &__info {
     flex-basis: 60%;
-    border: 1px solid red;
   }
 }

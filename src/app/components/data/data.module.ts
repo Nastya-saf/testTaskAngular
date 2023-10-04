@@ -7,9 +7,6 @@ import { DataComponent } from './data.component';
 import { DataRoutingModule } from './data-routing.module';
 import { TestTaskService } from 'src/app/service/test-task.service';
 
-// import { FolderPageRoutingModule } from './data-routing.module';
-
-// import { FolderPage } from './folder.page';
 
 @NgModule({
   imports: [

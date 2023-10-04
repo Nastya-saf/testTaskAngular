@@ -1,17 +1,15 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { TestTaskService } from 'src/app/service/test-task.service';
 import { NavController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-folder',
+  selector: 'app-data',
   templateUrl: './data.component.html',
   styleUrls: ['./data.component.scss'],
 })
 export class DataComponent {
-  // JSONData
-  //form
+
   form: FormGroup;
   constructor(private _formBuilder: FormBuilder,private _navCtrl: NavController,private _testTaskService:TestTaskService) {
     

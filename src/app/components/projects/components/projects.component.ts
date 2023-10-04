@@ -1,6 +1,5 @@
-import { Component, inject, OnInit, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-// import { Nav, Platform } from '@angular/ionic';
 
 @Component({
   selector: 'app-projects',
@@ -8,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent {
-  // @ViewChild(Nav) navCtrl: Nav;
+
   public selectedId: string = '';
 
   constructor(private _activatedRoute: ActivatedRoute) {
@@ -16,8 +15,6 @@ export class ProjectsComponent {
   }
 
   ngOnInit() {
-    // console.log('ProjectsComponent ngOnInit id!!!: ', this._activatedRoute.snapshot.params['id']);
-
     this.selectedId = this._activatedRoute.snapshot.paramMap.get('id') as string;
     console.log('ProjectsComponent ngOnInit this.selectedId: ', this.selectedId);
   }

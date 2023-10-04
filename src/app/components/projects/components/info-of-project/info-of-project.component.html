@@ -1,88 +1,40 @@
-<!-- [fullscreen]="true" -->
-<!-- info-of-project component html<br>
-id: {{id}}
-<br>
-<div *ngIf="project">
-  project: {{project.id}}<br>
-  project: {{project.subject}}
-</div> -->
-
-
 <form [formGroup]="form" *ngIf="project" (ngSubmit)="submitForm()" class="info-projects">
   <div class="info-projects__title">{{project.subject}}</div>
-    <!-- <ion-label>Введите JSON:</ion-label> -->
-    <!-- <ion-textarea formControlName="dataJSON" fill="outline" class="data-container__textarea">
-    </ion-textarea> -->
   <div class="info-projects__row">
     
     <div>
       <ion-label position="stacked" class="info-projects__lable">Дата начала</ion-label>
-      <!-- {{form.controls['startDate'].value | date:'d.M.y'}} -->
       <ion-button fill="clear" (click)="openCalendar()" class="info-projects__row__date-button">
-          <!-- <ion-icon slot="icon-only" name="calendar-outline" color="primary" size="small"></ion-icon> -->
         {{form.controls['startDate'].value | date:'d.M.y'}}
       </ion-button> 
     </div>
     <div>
         <ion-label position="stacked" class="info-projects__lable">Дата окончания</ion-label>
         {{form.controls['endDate'].value | date:'d.M.y'}}
-        <!-- <ion-button fill="clear" (click)="openCalendar()">
-          {{form.controls['startDate'].value | date:'d.M.y'}}
-        </ion-button>  -->
     </div>
     <div>
       <ion-label position="stacked" class="info-projects__lable">Автор</ion-label>
-      <!-- fill="outline" -->
       <ion-input formControlName="createdBy"></ion-input>
     </div>
   </div>
-    <!-- slots​="date-target" -->
-    <!-- <ion-datetime-button datetime="startDate" ></ion-datetime-button> -->
-    <!-- <ion-datetime formControlName="startDate"  preferWheel ></ion-datetime> -->
-    <!-- <ion-label position="stacked">Дата окончания</ion-label> -->
-    <!-- <ion-datetime formControlName="dateOfBirth" displayFormat="DD.MM.YYYY"></ion-datetime> -->
-    <!-- <ion-datetime formControlName="endDate"></ion-datetime> -->
-    <!-- <ion-datetime-button  datetime="endDate"></ion-datetime-button> -->
     <div>
       <ion-label position="stacked" class="info-projects__lable">Описание</ion-label>
-      <!-- fill="solid" -->
       <ion-input formControlName="description" ></ion-input>
     </div>
-  <div class="info-projects__flex-center">
-    
-    <ion-button type="submit" color="medium" expand="full" [disabled]="form.pristine" class="info-projects__button-submit">Submit</ion-button>
+  <div class="info-projects__flex-center">  
+    <ion-button type="submit" color="medium" expand="full" [disabled]="form.pristine" class="info-projects__button-submit">Изменить</ion-button>
   </div>
     
-    <!-- <ion-modal [keepContentsMounted]="true">
-      <ng-template>
-        <ion-datetime formControlName="startDate" presentation="date" id="startDate"></ion-datetime>
-      </ng-template>
-    </ion-modal> -->
-  <!-- 
-    <ion-modal [keepContentsMounted]="true">
-      <ng-template>
-        <ion-datetime formControlName="endDate" presentation="date" id="endDate"></ion-datetime>
-      </ng-template>
-    </ion-modal> -->
-    <br>-------------------------------------------------<br>
-    <!-- Рабочая версия -->
-     <!-- <ion-button fill="clear" (click)="openCalendar()">
-        <!-- <ion-icon slot="icon-only" name="calendar-outline" color="primary" size="small"></ion-icon> --
-        {{form.controls['startDate'].value | date:'d.M.y'}}
-      </ion-button>  -->
-      <!-- <ion-datetime-button datetime="datetime" id="fake-click"></ion-datetime-button> -->
+      <ion-datetime-button datetime="datetime" class="info-projects__display_none"></ion-datetime-button>
       <ion-modal [keepContentsMounted]="true" [isOpen]="showCalendar" (didDismiss)="cancelCalendar()">
         <ng-template>
           <ion-datetime
             id="datetime"
             presentation="date"
-            formControlName="startDate"
-           
-          ></ion-datetime> 
-          <!--
-            [showDefaultButtons]="true" presentation="month-year"
-          doneText="Confirm"
-          cancelText="Cancel" -->
+            formControlName="startDate" 
+          >
+        </ion-datetime> 
+          
         </ng-template>
       </ion-modal>
   </form>

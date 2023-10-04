@@ -1,14 +1,10 @@
 
-<ion-list *ngIf="listProject" lines="full">
+<ion-list *ngIf="listProject" lines="full" class="list-project">
   <ion-item *ngFor="let project of listProject" [button]="true" [routerLink]="['/projects/info',project.id]">
     <ion-label>
-      <!-- DatePipe и в провайдеры модуля -->
-      <!-- {{project.id}} -->
-      <div class="list-project">
+        <!-- class="list-project" -->
+      <div >
         <div class="list-project__text_gray">
-            <!-- <div>{{project.startDate | date:'d MMMM y'}}</div>
-            -
-            <div>{{project.endDate | date:'d MMMM y'}}</div> -->
           {{project.startDate | date:'d MMMM y'}}
             -
           {{project.endDate | date:'d MMMM y'}}

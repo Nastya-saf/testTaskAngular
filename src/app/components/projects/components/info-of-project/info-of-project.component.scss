@@ -1,9 +1,8 @@
-// #fake-click {
-//   display: none;
-// }
-
-
 .info-projects {
+
+  &__display_none {
+    display: none;
+  }
 
   &__title {
     text-align: center;
@@ -24,6 +23,9 @@
   &__flex-center {
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 7%;
+    width: 53%;
   }
 
   &__button-submit {
