@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { DataComponent } from './components/data.component';
 import { DataRoutingModule } from './data-routing.module';
-import { TestTaskService } from 'src/app/service/test-task.service';
+import { TestTaskService } from 'src/app/services/test-task.service';
 
 
 @NgModule({

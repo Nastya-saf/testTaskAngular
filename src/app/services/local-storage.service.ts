@@ -1,4 +1,4 @@
-import { Project } from '../interface/project.interface';
+import { Project } from '../interfaces/project.interface';
 
 export class LocalStorageService {
   private storage: { [key: string]: any };

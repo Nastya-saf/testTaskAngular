@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavParams } from '@ionic/angular';
-import { TestTaskService } from 'src/app/service/test-task.service';
-import { Project } from 'src/app/interface/project.interface';
+import { TestTaskService } from 'src/app/services/test-task.service';
+import { Project } from 'src/app/interfaces/project.interface';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({

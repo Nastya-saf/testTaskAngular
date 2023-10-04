@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TestTaskService } from 'src/app/service/test-task.service';
-import { Project } from 'src/app/interface/project.interface';
+import { TestTaskService } from 'src/app/services/test-task.service';
+import { Project } from 'src/app/interfaces/project.interface';
 
 @Component({
   selector: 'app-list-project',

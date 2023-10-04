@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { TestTaskService } from 'src/app/service/test-task.service';
+import { TestTaskService } from 'src/app/services/test-task.service';
 import { NavController } from '@ionic/angular';
 
 @Component({

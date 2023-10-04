@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { LocalStorageService } from './local-storage.service';
-import { Project } from '../interface/project.interface';
+import { Project } from '../interfaces/project.interface';
 import { Observable, of } from 'rxjs';
 
 
