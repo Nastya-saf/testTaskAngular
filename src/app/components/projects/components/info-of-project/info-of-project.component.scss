@@ -1,0 +1,36 @@
+// #fake-click {
+//   display: none;
+// }
+
+
+.info-projects {
+
+  &__title {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__date-button {
+      color: black;
+      font-size: inherit;
+    }
+  }
+
+  &__flex-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button-submit {
+    width: 40%;
+  }
+
+  &__lable {
+    color: rgba(0, 0, 0, 0.13);
+  }
+}

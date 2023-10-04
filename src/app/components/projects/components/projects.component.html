@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>projects component html
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="projects-container">
+        <div class="projects-container__list">
+            <app-list-project></app-list-project>
+        </div>
+        <div class="projects-container__info" *ngIf="this.selectedId">
+            <app-info-of-project [id]='this.selectedId'></app-info-of-project>
+        </div>
+    </div>
+</ion-content>

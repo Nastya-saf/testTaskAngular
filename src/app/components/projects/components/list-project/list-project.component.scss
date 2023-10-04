@@ -1,0 +1,16 @@
+.list-project {
+  
+  &__text_gray {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.13);
+  }
+
+  &__title {
+    margin-top: 5px;
+  }
+  
+  &__flex_end {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
